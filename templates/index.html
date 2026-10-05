@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>California HomeValue AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='style1.css') }}">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- Animated background -->
+
+<div class="background">
+
+    <div class="circle circle-1"></div>
+
+    <div class="circle circle-2"></div>
+
+    <div class="circle circle-3"></div>
+
+</div>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🏡
+            </div>
+
+            <div>
+
+                <h2>
+                    HomeValue<span>AI</span>
+                </h2>
+
+                <p>
+                    California Real Estate
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            AI Model Online
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- MAIN -->
+
+<main class="main-container">
+
+
+    <!-- HERO -->
+
+    <section class="hero-section">
+
+
+        <div class="hero-content">
+
+
+            <div class="tag">
+
+                ✦ MACHINE LEARNING POWERED
+
+            </div>
+
+
+            <h1>
+
+                Predict the
+
+                <span>
+                    value of your
+                    California home.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Get an estimated median house value using
+                a machine learning model trained on
+                California housing data.
+
+            </p>
+
+
+
+            <!-- STATISTICS -->
+
+            <div class="stats">
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        🏠
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            8
+                        </strong>
+
+                        <small>
+                            Property Factors
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            ML
+                        </strong>
+
+                        <small>
+                            Prediction Model
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            CA
+                        </strong>
+
+                        <small>
+                            Housing Dataset
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- LOCATION CARD -->
+
+            <div class="location-card">
+
+                <div class="location-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <strong>
+                        California
+                    </strong>
+
+                    <p>
+                        Housing market prediction
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- PREDICTION FORM -->
+
+        <div class="form-card">
+
+
+            <div class="form-header">
+
+
+                <div>
+
+                    <span>
+                        PROPERTY ANALYSIS
+                    </span>
+
+                    <h2>
+                        Enter Property Details
+                    </h2>
+
+                    <p>
+                        Provide the details below to generate
+                        your prediction.
+                    </p>
+
+                </div>
+
+
+                <div class="form-icon">
+                    🏠
+                </div>
+
+
+            </div>
+
+
+
+            <form action="/predict"
+                  method="get">
+
+
+                <div class="form-grid">
+
+
+                    <!-- MEDINC -->
+
+                    <div class="field">
+
+                        <label>
+                            <span class="label-icon">
+                                💰
+                            </span>
+
+                            Median Income
+                        </label>
+
+                        <input
+                            type="number"
+                            name="MedInc"
+                            step="any"
+                            placeholder="e.g. 3.5"
+                            required>
+
+                        <small>
+                            Median income in the area
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- HOUSE AGE -->
+
+                    <div class="field">
+
+                        <label>
+
+                            <span class="label-icon">
+                                📅
+                            </span>
+
+                            House Age
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="HouseAge"
+                            step="any"
+                            placeholder="e.g. 25"
+                            required>
+
+                        <small>
+                            Average house age
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- ROOMS -->
+
+                    <div class="field">
+
+                        <label>
+
+                            <span class="label-icon">
+                                🛋️
+                            </span>
+
+                            Average Rooms
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="AveRooms"
+                            step="any"
+                            placeholder="e.g. 5.8"
+                            required>
+
+                        <small>
+                            Average rooms per household
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- BEDROOMS -->
+
+                    <div class="field">
+
+                        <label>
+
+                            <span class="label-icon">
+                                🛏️
+                            </span>
+
+                            Average Bedrooms
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="AveBedrms"
+                            step="any"
+                            placeholder="e.g. 1.2"
+                            required>
+
+                        <small>
+                            Average bedrooms
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- POPULATION -->
+
+                    <div class="field">
+
+                        <label>
+
+                            <span class="label-icon">
+                                👥
+                            </span>
+
+                            Population
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="Population"
+                            step="any"
+                            placeholder="e.g. 1500"
+                            required>
+
+                        <small>
+                            Area population
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- OCCUPANCY -->
+
+                    <div class="field">
+
+                        <label>
+
+                            <span class="label-icon">
+                                👨‍👩‍👧
+                            </span>
+
+                            Average Occupancy
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="AveOccup"
+                            step="any"
+                            placeholder="e.g. 3.0"
+                            required>
+
+                        <small>
+                            People per household
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- LONGITUDE -->
+
+                    <div class="field">
+
+                        <label>
+
+                            <span class="label-icon">
+                                🌎
+                            </span>
+
+                            Longitude
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="Longitude"
+                            step="any"
+                            placeholder="-118.25"
+                            required>
+
+                        <small>
+                            Geographic longitude
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- LATITUDE -->
+
+                    <div class="field">
+
+                        <label>
+
+                            <span class="label-icon">
+                                📌
+                            </span>
+
+                            Latitude
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="Latitude"
+                            step="any"
+                            placeholder="34.05"
+                            required>
+
+                        <small>
+                            Geographic latitude
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="predict-btn">
+
+                    <span>
+                        ✨ Predict House Value
+                    </span>
+
+                    <span class="btn-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <div class="model-info">
+
+                    <span>
+                        🛡
+                    </span>
+
+                    Your data is processed locally
+                    using the trained ML model.
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- BOTTOM INFO -->
+
+    <section class="info-section">
+
+
+        <div class="info-card">
+
+            <div class="info-number">
+                01
+            </div>
+
+            <div>
+
+                <h3>
+                    Enter Details
+                </h3>
+
+                <p>
+                    Provide the property and
+                    geographic information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="info-card">
+
+            <div class="info-number">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    AI Analysis
+                </h3>
+
+                <p>
+                    Your inputs are processed
+                    by the trained model.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="info-card">
+
+            <div class="info-number">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    Get Prediction
+                </h3>
+
+                <p>
+                    Receive the estimated
+                    median house value.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div>
+
+        <strong>
+            HomeValueAI
+        </strong>
+
+        <span>
+            • California Housing Prediction
+        </span>
+
+    </div>
+
+
+    <div>
+
+        Built with
+        <b>
+            Python
+        </b>
+        +
+        <b>
+            FastAPI
+        </b>
+        +
+        <b>
+            Machine Learning
+        </b>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+
+</html>
